@@ -1,5 +1,5 @@
 import { Schema, model, connect } from "mongoose";
-import { Address, FullName, Orders, User } from "./user/user.interface";
+import { Address, FullName, Orders, TUser } from "./user/user.interface";
 
 const addressSchema = new Schema<Address>({
   street: { type: String, required: true },
@@ -15,7 +15,7 @@ const fullNameSchema = new Schema<FullName>({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
 });
-const userSchema = new Schema<User>({
+const userSchema = new Schema<TUser>({
   userId: { type: Number, required: true },
   username: { type: String, required: true },
   password: { type: String, required: true },
@@ -27,3 +27,5 @@ const userSchema = new Schema<User>({
   address: { type: addressSchema, required: true },
   orders: { type: [ordersSchema], required: true },
 });
+
+export const UserModel = model<TUser>("User", userSchema);
