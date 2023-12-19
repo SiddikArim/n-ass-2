@@ -1,6 +1,6 @@
 import express, { Application, Request, Response } from "express";
 import cors from "cors";
-import { StudentRoutes } from "./app/modules/user/user.route";
+import { userRoutes } from "./app/modules/user/user.route";
 const port = 3000;
 const app: Application = express();
 
@@ -9,7 +9,7 @@ app.use(express.json()); // for parsing application/json
 app.use(cors());
 
 // application routes
-app.use("/POST/api/users", StudentRoutes);
+app.use("/POST/api/users", userRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World!");

@@ -5,5 +5,6 @@ const router = express.Router();
 
 // will call controller
 router.post("/create-user", userController.createUser);
-
-export const StudentRoutes = router;
+router.get("/", userController.getAllUser);
+router.get("/:userId", userController.getSingleUser);
+export const userRoutes = router;
