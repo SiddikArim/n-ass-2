@@ -9,10 +9,12 @@ app.use(express.json()); // for parsing application/json
 app.use(cors());
 
 // application routes
-app.use("/POST/api/users", userRoutes);
+app.use("/api/users", userRoutes);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
+  res.send(
+    "Sohoj sorol assignment korte deri holo bari te ammu ar choto vi osustho silo"
+  );
 });
 
 export default app;

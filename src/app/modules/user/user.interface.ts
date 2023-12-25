@@ -28,6 +28,9 @@ export type TUser = {
   orders: Array<TOrders>;
 };
 
+// export type UserMethods = {
+//   isUserExists(id: Number): Promise<TUser | null>;
+// };
 export type UserMethods = {
   isUserExists(id: Number): Promise<TUser | null>;
 };
