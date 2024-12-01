@@ -14,6 +14,6 @@ app.use((0, cors_1.default)());
 // application routes
 app.use("/api/users", user_route_1.userRoutes);
 app.get("/", (req, res) => {
-    res.send("Sohoj sorol assignment korte deri holo bari te ammu ar choto vi osustho silo but alhumdulillah sob tai korte parsi ..but somoy lagse commit sob somoy kori nai requirement fill up hoise kina seta jni na asa korbo consider korben.");
+    res.send("University Management System Backend");
 });
 exports.default = app;
